@@ -121,7 +121,7 @@ html, body {
 .hdr-anchor-eyebrow {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 14pt;
+  font-size: 17pt;
   letter-spacing: 3pt;
   color: var(--orange);
   text-transform: uppercase;
@@ -129,7 +129,7 @@ html, body {
 .hdr-anchor-name {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 26pt;
+  font-size: 30pt;
   line-height: 1.1;
   color: var(--navy);
 }
@@ -138,7 +138,7 @@ html, body {
 }
 .hdr-anchor-sub {
   font-family: var(--font-body);
-  font-size: 16pt;
+  font-size: 19pt;
   color: var(--ink);
   line-height: 1.3;
   margin-top: 1mm;
@@ -172,16 +172,16 @@ html, body {
 }
 .stat-lbl {
   font-family: var(--font-body);
-  font-size: 19pt;
+  font-size: 22pt;
   line-height: 1.2;
   color: var(--ink);
-  max-width: 95mm;
+  max-width: 100mm;
 }
 .stat-lbl em {
   display: block;
   font-style: normal;
   color: var(--muted);
-  font-size: 15pt;
+  font-size: 17pt;
   margin-top: 1mm;
 }
 
@@ -194,6 +194,79 @@ html, body {
   width: 100%;
   max-height: 210mm;
   object-fit: contain;
+}
+
+/* Hero right-column: "Translating from" resource grid */
+.hdr-resources {
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+  padding: 6mm 0;
+  align-self: stretch;
+}
+.resources-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17pt;
+  letter-spacing: 3pt;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.resources-h {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32pt;
+  line-height: 1.05;
+  color: var(--navy);
+  margin: 0 0 3mm;
+  letter-spacing: -0.5pt;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5mm;
+}
+.rtile {
+  background: #fff;
+  border: 0.5mm solid var(--line);
+  border-top: 2mm solid var(--orange);
+  border-radius: 2mm;
+  padding: 6mm 5mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2mm;
+  min-height: 42mm;
+  box-shadow: 0 0.6mm 1.4mm rgba(2,52,82,.06);
+}
+.rtile:nth-child(3n+2) { border-top-color: var(--navy); }
+.rtile:nth-child(3n+3) { border-top-color: var(--teal); }
+.rtile-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22pt;
+  color: var(--navy);
+  line-height: 1.05;
+  letter-spacing: -0.3pt;
+}
+.rtile-name strong {
+  font-weight: 900;
+  color: var(--orange);
+}
+.rtile-meta {
+  font-family: var(--font-body);
+  font-size: 14pt;
+  color: var(--muted);
+  letter-spacing: 0.5pt;
+  text-transform: uppercase;
+}
+.resources-foot {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 17pt;
+  color: var(--muted);
+  margin: 1mm 0 0;
+  text-align: right;
 }
 
 /* ============== SECTION HEAD ============== */
@@ -250,7 +323,7 @@ html, body {
 }
 .claim-a {
   font-family: var(--font-body);
-  font-size: 22pt;
+  font-size: 26pt;
   line-height: 1.4;
   color: var(--ink);
   margin: 0;
@@ -288,8 +361,8 @@ html, body {
 }
 .bridge-end-sub {
   font-family: var(--font-body);
-  font-size: 17pt;
-  color: rgba(255,255,255,.82);
+  font-size: 19pt;
+  color: rgba(255,255,255,.85);
   line-height: 1.35;
 }
 
@@ -319,7 +392,7 @@ html, body {
   align-self: center;
   margin: -2mm 0 2mm;
   font-family: var(--font-body);
-  font-size: 17pt;
+  font-size: 20pt;
   color: var(--navy);
   text-align: center;
 }
@@ -347,13 +420,13 @@ html, body {
 .bbar-tag {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 16pt;
+  font-size: 18pt;
   letter-spacing: 2pt;
   color: var(--navy);
 }
 .bbar p {
   font-family: var(--font-body);
-  font-size: 17pt;
+  font-size: 19pt;
   line-height: 1.35;
   color: var(--ink);
   margin: 0;
@@ -406,7 +479,7 @@ html, body {
 }
 .pbook-desc {
   font-family: var(--font-body);
-  font-size: 20pt;
+  font-size: 22pt;
   line-height: 1.4;
   color: var(--ink);
   margin: 0;
@@ -426,7 +499,7 @@ html, body {
   position: relative;
   padding-left: 8mm;
   font-family: var(--font-body);
-  font-size: 18pt;
+  font-size: 20pt;
   line-height: 1.35;
   color: var(--ink);
 }
@@ -476,7 +549,7 @@ html, body {
 .ci-h {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 21pt;
+  font-size: 24pt;
   line-height: 1.15;
   margin: 0 0 1.5mm;
 }
@@ -484,7 +557,7 @@ html, body {
 .contrast-item--yes .ci-h { color: #fff; }
 .ci-p {
   font-family: var(--font-body);
-  font-size: 18pt;
+  font-size: 20pt;
   line-height: 1.35;
   margin: 0;
 }
@@ -495,7 +568,7 @@ html, body {
 .open-line {
   text-align: center;
   font-family: var(--font-body);
-  font-size: 16pt;
+  font-size: 18pt;
   color: var(--muted);
   margin: 0;
   padding-top: 2mm;
@@ -558,7 +631,7 @@ html, body {
   align-self: flex-start;
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 15pt;
+  font-size: 17pt;
   letter-spacing: 2pt;
   color: var(--orange);
   padding: 1.5mm 5mm;
@@ -595,7 +668,7 @@ html, body {
   justify-content: center;
 }
 .step--ms .step-h { color: #fff; }
-.step--ms .step-p { color: rgba(255,255,255,.95); font-size: 17pt; }
+.step--ms .step-p { color: rgba(255,255,255,.95); font-size: 19pt; }
 .step-ms-num {
   display: inline-flex;
   align-items: center;
@@ -700,7 +773,7 @@ html, body {
 }
 .way-p {
   font-family: var(--font-body);
-  font-size: 19pt;
+  font-size: 21pt;
   line-height: 1.4;
   color: var(--ink);
   margin: 0;
@@ -720,7 +793,7 @@ html, body {
   color: #fff;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 17pt;
+  font-size: 18pt;
   padding: 2.5mm 5mm;
   border-radius: 1.5mm;
   align-self: flex-start;
@@ -737,7 +810,7 @@ html, body {
   color: var(--navy);
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 16pt;
+  font-size: 17pt;
   padding: 2mm 5mm;
   border-radius: 999px;
 }
@@ -788,8 +861,8 @@ html, body {
 }
 .ftr-url {
   font-family: var(--font-body);
-  font-size: 16pt;
-  color: rgba(255,255,255,.82);
+  font-size: 18pt;
+  color: rgba(255,255,255,.85);
   margin: 0;
   line-height: 1.35;
 }
@@ -819,8 +892,8 @@ html, body {
 }
 .ftr-partners li {
   font-family: var(--font-body);
-  font-size: 15pt;
-  color: rgba(255,255,255,.78);
+  font-size: 17pt;
+  color: rgba(255,255,255,.82);
   line-height: 1.25;
 }
 
@@ -857,8 +930,8 @@ html, body {
 }
 .comm-l {
   font-family: var(--font-body);
-  font-size: 15pt;
-  color: rgba(255,255,255,.85);
+  font-size: 17pt;
+  color: rgba(255,255,255,.88);
 }
 
 .ftr-brand {
