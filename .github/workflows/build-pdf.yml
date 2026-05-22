@@ -1,0 +1,65 @@
+name: Build poster PDF
+
+on:
+  # Manual-only: trigger via the "Run workflow" button in the Actions tab.
+  # This keeps versioned PDFs deliberate instead of bumping on every push.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Puppeteer + http-server
+        run: npm install --no-save puppeteer http-server
+
+      - name: Serve poster locally
+        run: |
+          npx http-server . -p 8000 -s &
+          # Wait for server to come up
+          for i in {1..10}; do
+            curl -sf http://localhost:8000/poster.html >/dev/null && break
+            sleep 1
+          done
+
+      - name: Determine next version
+        id: version
+        run: |
+          mkdir -p pdfs
+          if compgen -G "pdfs/poster-v*.pdf" >/dev/null; then
+            HIGHEST=$(ls pdfs/poster-v*.pdf | sed -E 's/.*poster-v([0-9]+)\.pdf/\1/' | sort -n | tail -1)
+            NEXT=$((HIGHEST + 1))
+          else
+            NEXT=1
+          fi
+          echo "version=$NEXT" >> "$GITHUB_OUTPUT"
+          echo "Next version: v$NEXT"
+
+      - name: Generate PDF
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: node scripts/generate-pdf.js
+
+      - name: Commit PDF
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pdfs/
+          if git diff --cached --quiet; then
+            echo "No PDF changes to commit."
+            exit 0
+          fi
+          git commit -m "Build poster PDF v${VERSION} [skip ci]"
+          git push
