@@ -1,5 +1,5 @@
 /* ============================================================
-   BioFAIR Pathfinder poster — A0 portrait (841 × 1189 mm)
+   BioFAIR Pathfinder poster – A0 portrait (841 × 1189 mm)
    The FAIR-in-action Bridge. ELIXIR / BioFAIR brand.
    Standalone HTML/CSS, no Jekyll, no Bootstrap.
    Print: Chrome → ⌘P → Paper 841×1189 mm, Background graphics ON.
@@ -102,6 +102,46 @@ html, body {
   color: var(--ink);
   margin: 0 0 12mm;
   max-width: 420mm;
+}
+
+/* Club anchor: names the home of these stats / this work */
+.hdr-anchor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1mm;
+  padding: 5mm 7mm;
+  margin: 0 0 6mm;
+  background: #fff;
+  border: 0.6mm solid var(--navy);
+  border-left: 4mm solid var(--orange);
+  border-radius: 2mm;
+  max-width: 100%;
+}
+.hdr-anchor-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14pt;
+  letter-spacing: 3pt;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+.hdr-anchor-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 26pt;
+  line-height: 1.1;
+  color: var(--navy);
+}
+.hdr-anchor-name strong {
+  font-weight: 900;
+}
+.hdr-anchor-sub {
+  font-family: var(--font-body);
+  font-size: 16pt;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-top: 1mm;
 }
 
 .hdr-stats {
@@ -400,7 +440,7 @@ html, body {
   font-size: 22pt;
 }
 
-/* "Not X · Not Y · But Z" contrast strip — sets up the playbooks reveal */
+/* "Not X · Not Y · But Z" contrast strip – sets up the playbooks reveal */
 .contrast {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -463,7 +503,7 @@ html, body {
 }
 .open-line strong { color: var(--navy); font-weight: 800; }
 
-/* ============== HOW IT WORKS — flow ============== */
+/* ============== HOW IT WORKS – flow ============== */
 .flow {
   padding: 10mm 22mm 8mm;           /* tighter internal padding */
   background: var(--navy);
@@ -784,6 +824,13 @@ html, body {
   line-height: 1.25;
 }
 
+.ftr-sub {
+  font-family: var(--font-body);
+  font-size: 14pt;
+  line-height: 1.3;
+  color: rgba(255,255,255,.7);
+  margin: -1mm 0 3mm;
+}
 .ftr-comm {
   list-style: none;
   padding: 0;
