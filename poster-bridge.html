@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The FAIR-in-action Bridge — aqueduct concept (B+)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#02263c; --bg2:#01141d;
+    --head:#ffffff; --body:#cfe2f0; --muted:#7fa3bb;
+    --amber:#ff8c38; --amber-l:#ffd089;
+    --display:"Work Sans","Lato",system-ui,sans-serif;
+    --bodyf:"Lato",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:#0b0f12;}
+  @page{size:A0 portrait;margin:0;}
+  @media screen{ html{ zoom:.28; } }
+
+  .poster{position:relative;width:841mm;height:1189mm;margin:0 auto;
+    background:radial-gradient(120% 64% at 50% 2%, #0c3a52 0%, #03202f 38%, #01070d 100%);
+    color:var(--body);font-family:var(--bodyf);overflow:hidden;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;display:flex;flex-direction:column;}
+
+  .top{padding:38mm 46mm 0;text-align:center;}
+  .eyebrow{font-family:var(--display);font-weight:800;letter-spacing:8pt;font-size:24pt;color:var(--amber);margin:0 0 9mm;}
+  .title{font-family:var(--display);font-weight:900;font-size:150pt;line-height:.92;letter-spacing:-4pt;color:var(--head);margin:0;}
+  .title .amber{color:var(--amber);}
+  .lede{font-family:var(--display);font-weight:500;font-size:33pt;line-height:1.25;color:var(--body);margin:11mm auto 0;max-width:600mm;}
+  .lede strong{color:var(--head);font-weight:800;}
+
+  .hero{flex:1 1 auto;display:flex;align-items:center;justify-content:center;padding:0 6mm;}
+  .hero svg{width:100%;height:100%;max-height:720mm;}
+
+  .foot{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24mm;padding:0 46mm 34mm;}
+  .foot-msg{font-family:var(--display);font-weight:700;font-size:30pt;line-height:1.2;color:var(--head);}
+  .foot-msg span{display:block;font-weight:400;font-size:22pt;color:var(--muted);margin-top:3mm;}
+  .qr{display:flex;flex-direction:column;align-items:center;gap:4mm;}
+  .qr-box{width:78mm;height:78mm;background:#fff;border-radius:4mm;padding:4mm;}
+  .qr-box img{width:100%;height:100%;object-fit:contain;}
+  .qr-cap{font-family:var(--display);font-weight:800;font-size:18pt;letter-spacing:3pt;color:var(--amber);text-transform:uppercase;}
+  .foot-contact{text-align:right;font-size:22pt;line-height:1.4;color:var(--body);}
+  .foot-contact strong{display:block;font-family:var(--display);font-weight:800;color:var(--head);font-size:24pt;margin-bottom:3mm;}
+  .foot-brand{margin-top:6mm;height:18mm;filter:brightness(0) invert(1);opacity:.9;}
+</style>
+</head>
+<body>
+<section class="poster">
+
+  <div class="top">
+    <p class="eyebrow">BIOFAIR PATHFINDER · MAY 2026 → APRIL 2027</p>
+    <h1 class="title">The <span class="amber">FAIR</span>-in-action Bridge</h1>
+    <p class="lede">Built from both banks, guidance and practice still don't meet — <strong>and data falls through the gap.</strong> We build the centre stones.</p>
+  </div>
+
+  <div class="hero">
+    <!-- ===================== AQUEDUCT (B+) ===================== -->
+    <svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg" role="img"
+         aria-label="A tall medieval aqueduct of stone arches reaching from a dark stormy bank on the left toward a sunlit living valley on the right. The central span is missing; glowing centre stones hang in the gap, and a faint citadel glows in the gorge beyond. Below, a river carries away lost data.">
+      <defs>
+        <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#d6cdb6"/>
+          <stop offset="55%" stop-color="#9f9580"/>
+          <stop offset="100%" stop-color="#675e4f"/>
+        </linearGradient>
+        <linearGradient id="key" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffe9b0"/>
+          <stop offset="50%" stop-color="#ff9d40"/>
+          <stop offset="100%" stop-color="#e9710f"/>
+        </linearGradient>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#ffe2a8" stop-opacity=".95"/>
+          <stop offset="45%" stop-color="#ff8c38" stop-opacity=".42"/>
+          <stop offset="100%" stop-color="#ff8c38" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="citadel" cx="50%" cy="60%" r="55%">
+          <stop offset="0" stop-color="#dff1ff" stop-opacity=".9"/>
+          <stop offset="100%" stop-color="#dff1ff" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#06283b"/>
+          <stop offset="100%" stop-color="#010a11"/>
+        </linearGradient>
+        <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#39404a"/>
+          <stop offset="100%" stop-color="#0d1116"/>
+        </linearGradient>
+        <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3f7d4a"/>
+          <stop offset="100%" stop-color="#10271c"/>
+        </linearGradient>
+        <radialGradient id="cloud" cx="50%" cy="40%" r="60%">
+          <stop offset="0" stop-color="#10283c"/>
+          <stop offset="100%" stop-color="#10283c" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="darkL" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#000509" stop-opacity=".66"/>
+          <stop offset="55%" stop-color="#000509" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="lightR" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="45%" stop-color="#bfe6ff" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#bfe6ff" stop-opacity=".14"/>
+        </linearGradient>
+        <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff4d6" stop-opacity=".45"/>
+          <stop offset="100%" stop-color="#fff4d6" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="bb" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="24"/></filter>
+        <filter id="bs" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+        <filter id="ds" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000" flood-opacity=".5"/>
+        </filter>
+        <g id="doc">
+          <rect x="-15" y="-19" width="30" height="38" rx="2.5" fill="#e4ebf2"/>
+          <path d="M5,-19 L15,-9 L5,-9 Z" fill="#b3c2cf"/>
+          <g stroke="#90a4b5" stroke-width="2" stroke-linecap="round">
+            <line x1="-8" y1="-7" x2="6" y2="-7"/><line x1="-8" y1="1" x2="8" y2="1"/><line x1="-8" y1="9" x2="8" y2="9"/>
+          </g>
+        </g>
+        <!-- one stone arch ring drawn as a thick stroked arc; mortar = dashed overlay -->
+        <g id="arch">
+          <path class="ring" d="M-100,0 A100,100 0 0 1 100,0" fill="none" stroke="url(#stone)" stroke-width="30"/>
+          <path d="M-100,0 A100,100 0 0 1 100,0" fill="none" stroke="#34301f" stroke-opacity=".55" stroke-width="31" stroke-dasharray="3 25"/>
+          <path d="M-85,0 A85,85 0 0 1 85,0" fill="none" stroke="#2c2818" stroke-opacity=".35" stroke-width="2"/>
+          <path d="M-115,0 A115,115 0 0 1 115,0" fill="none" stroke="#efe6cf" stroke-opacity=".25" stroke-width="2"/>
+        </g>
+        <!-- a pier with course lines + cutwater -->
+        <g id="pier">
+          <path d="M-18,0 L18,0 L18,210 L0,250 L-18,210 Z" fill="url(#stone)"/>
+          <g stroke="#34301f" stroke-opacity=".45" stroke-width="2">
+            <line x1="-18" y1="34" x2="18" y2="34"/><line x1="-18" y1="68" x2="18" y2="68"/>
+            <line x1="-18" y1="102" x2="18" y2="102"/><line x1="-18" y1="136" x2="18" y2="136"/>
+            <line x1="-18" y1="170" x2="18" y2="170"/><line x1="0" y1="0" x2="0" y2="210"/>
+          </g>
+        </g>
+      </defs>
+
+      <!-- ===== sky: storm left, light right ===== -->
+      <g filter="url(#bb)">
+        <ellipse cx="150" cy="110" rx="240" ry="120" fill="url(#cloud)"/>
+        <ellipse cx="340" cy="60"  rx="210" ry="96"  fill="url(#cloud)"/>
+        <ellipse cx="90"  cy="300" rx="180" ry="130" fill="url(#cloud)"/>
+      </g>
+      <polygon points="515,150 415,470 615,470" fill="url(#shaft)"/>
+
+      <!-- ===== distant glowing citadel in the gorge ===== -->
+      <g>
+        <ellipse cx="515" cy="470" rx="150" ry="150" fill="url(#citadel)" opacity=".5"/>
+        <g fill="#cfe9fb" opacity=".30">
+          <rect x="476" y="430" width="14" height="70"/><rect x="494" y="408" width="16" height="92"/>
+          <rect x="514" y="420" width="14" height="80"/><rect x="532" y="400" width="16" height="100"/>
+          <rect x="552" y="436" width="13" height="64"/><rect x="460" y="448" width="12" height="52"/>
+          <path d="M494,408 l8,-14 l8,14 Z"/><path d="M532,400 l8,-14 l8,14 Z"/>
+        </g>
+      </g>
+
+      <!-- ===== water + lost data ===== -->
+      <rect x="0" y="640" width="1000" height="160" fill="url(#water)"/>
+      <g stroke="#5fa6c4" stroke-opacity=".16" stroke-width="3">
+        <line x1="60" y1="684" x2="330" y2="684"/><line x1="380" y1="712" x2="770" y2="712"/>
+        <line x1="120" y1="746" x2="540" y2="746"/><line x1="650" y1="672" x2="910" y2="672"/>
+        <line x1="560" y1="764" x2="940" y2="764"/>
+      </g>
+      <g opacity=".5">
+        <use href="#doc" transform="translate(360,690) rotate(24) scale(.85)"/>
+        <use href="#doc" transform="translate(470,724) rotate(-14) scale(.78)"/>
+        <use href="#doc" transform="translate(560,704) rotate(33) scale(.9)"/>
+        <use href="#doc" transform="translate(652,732) rotate(-26) scale(.7)"/>
+        <use href="#doc" transform="translate(260,716) rotate(12) scale(.68)"/>
+        <use href="#doc" transform="translate(756,700) rotate(18) scale(.68)"/>
+      </g>
+      <rect x="0" y="640" width="1000" height="160" fill="#020f17" opacity=".42"/>
+      <ellipse cx="515" cy="695" rx="150" ry="38" fill="#ff8c38" opacity=".18" filter="url(#bb)"/>
+      <text x="515" y="784" text-anchor="middle" font-family="var(--bodyf)" font-style="italic" font-weight="700" font-size="20" fill="#8aa2b4">…data that falls through the gap is lost</text>
+
+      <!-- ===== banks: barren left, living right ===== -->
+      <path d="M0,300 L70,330 L48,380 L120,430 L96,470 L150,470 L120,560 L150,560 L150,660 L0,660 Z" fill="url(#rock)"/>
+      <path d="M1000,470 C940,452 880,470 845,500 C880,520 940,512 1000,520 L1000,660 L845,660 Q845,560 845,500 Z" fill="url(#green)"/>
+      <g><!-- life on the right bank -->
+        <circle cx="905" cy="512" r="5" fill="#ffd089"/><circle cx="930" cy="505" r="5" fill="#8fe6ad"/>
+        <circle cx="955" cy="513" r="5" fill="#ff9d7a"/><circle cx="978" cy="503" r="4" fill="#ffd089"/>
+        <path d="M892,520 q6,-22 12,0" stroke="#8fe6ad" stroke-width="3" fill="none"/>
+      </g>
+
+      <!-- ===== piers ===== -->
+      <g filter="url(#ds)">
+        <use href="#pier" x="90"  y="440"/>
+        <use href="#pier" x="260" y="440"/>
+        <use href="#pier" x="430" y="440"/>
+        <use href="#pier" x="600" y="440"/>
+        <use href="#pier" x="770" y="440"/>
+        <use href="#pier" x="940" y="440"/>
+      </g>
+
+      <!-- ===== arches (complete) ===== -->
+      <g filter="url(#ds)">
+        <use href="#arch" x="175" y="440"/>
+        <use href="#arch" x="345" y="440"/>
+        <use href="#arch" x="685" y="440"/>
+        <use href="#arch" x="855" y="440"/>
+      </g>
+
+      <!-- ===== deck + parapet (broken over the gap) ===== -->
+      <g filter="url(#ds)">
+        <rect x="74" y="300" width="356" height="28" fill="url(#stone)"/>
+        <rect x="600" y="300" width="356" height="28" fill="url(#stone)"/>
+        <g fill="url(#stone)">
+          <rect x="86"  y="286" width="20" height="16"/><rect x="140" y="286" width="20" height="16"/>
+          <rect x="194" y="286" width="20" height="16"/><rect x="248" y="286" width="20" height="16"/>
+          <rect x="302" y="286" width="20" height="16"/><rect x="356" y="286" width="20" height="16"/>
+          <rect x="404" y="286" width="20" height="16"/>
+          <rect x="606" y="286" width="20" height="16"/><rect x="660" y="286" width="20" height="16"/>
+          <rect x="714" y="286" width="20" height="16"/><rect x="768" y="286" width="20" height="16"/>
+          <rect x="822" y="286" width="20" height="16"/><rect x="876" y="286" width="20" height="16"/>
+          <rect x="924" y="286" width="20" height="16"/>
+        </g>
+      </g>
+
+      <!-- ===== THE MISSING CENTRE SPAN (glow) ===== -->
+      <g>
+        <ellipse cx="515" cy="380" rx="200" ry="150" fill="url(#glow)" filter="url(#bb)"/>
+        <!-- ghost of the missing arch + deck -->
+        <path d="M415,440 A100,100 0 0 1 615,440" fill="none" stroke="var(--amber)" stroke-opacity=".5" stroke-width="30" stroke-dasharray="7 12"/>
+        <rect x="430" y="300" width="170" height="28" fill="none" stroke="var(--amber)" stroke-opacity=".5" stroke-width="3" stroke-dasharray="9 8"/>
+        <!-- placed glowing centre stones -->
+        <path d="M535,326.7 A115,115 0 0 1 495,326.7 L500.2,356.3 A85,85 0 0 0 529.8,356.3 Z" fill="url(#key)"/>
+        <path d="M495,326.7 A115,115 0 0 1 459.6,335.2 L470.6,362.6 A85,85 0 0 0 500.2,356.3 Z" fill="url(#key)" opacity=".6"/>
+        <path d="M570.4,335.2 A115,115 0 0 1 535,326.7 L529.8,356.3 A85,85 0 0 0 559.4,362.6 Z" fill="url(#key)" opacity=".6"/>
+        <rect x="486" y="300" width="58" height="28" fill="url(#key)"/>
+        <!-- placement hint -->
+        <path d="M515,250 l0,30 M515,250 l-13,15 M515,250 l13,15" stroke="var(--amber)" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </g>
+
+      <!-- ===== data falling through the gap ===== -->
+      <g>
+        <use href="#doc" transform="translate(500,392) rotate(16) scale(.9)" opacity=".92"/>
+        <use href="#doc" transform="translate(540,452) rotate(-20) scale(.85)" opacity=".8"/>
+        <use href="#doc" transform="translate(486,512) rotate(28) scale(.8)" opacity=".64"/>
+        <use href="#doc" transform="translate(528,576) rotate(-12) scale(.76)" opacity=".48"/>
+        <use href="#doc" transform="translate(498,628) rotate(20) scale(.7)" opacity=".34"/>
+      </g>
+
+      <!-- ===== mood washes: dark left, light right ===== -->
+      <rect x="0" y="0" width="500" height="800" fill="url(#darkL)"/>
+      <rect x="500" y="0" width="500" height="800" fill="url(#lightR)"/>
+
+      <!-- ===== labels ===== -->
+      <g font-family="var(--display)">
+        <text x="150" y="610" text-anchor="middle" font-weight="900" font-size="25" fill="#fff">FAIR POLICY</text>
+        <text x="150" y="640" text-anchor="middle" font-weight="900" font-size="25" fill="#fff">&amp; GUIDANCE</text>
+        <text x="855" y="610" text-anchor="middle" font-weight="900" font-size="25" fill="#fff">EVERYDAY</text>
+        <text x="855" y="640" text-anchor="middle" font-weight="900" font-size="25" fill="#fff">RESEARCH PRACTICE</text>
+
+        <text x="515" y="170" text-anchor="middle" font-weight="900" font-size="30" letter-spacing="2" fill="var(--amber-l)">THE MISSING MIDDLE LAYER</text>
+        <text x="515" y="202" text-anchor="middle" font-family="var(--bodyf)" font-weight="700" font-size="22" fill="#fff">the centre stones · built by RDM professionals</text>
+      </g>
+    </svg>
+    <!-- ===================================================== -->
+  </div>
+
+  <div class="foot">
+    <div class="foot-msg">
+      Two playbooks. Six rollout days. One open toolkit.
+      <span>Pick · mix · customise — then take a flyer.</span>
+    </div>
+    <div class="qr">
+      <div class="qr-box"><img src="assets/img/qr-placeholder.svg" alt="QR to project page"></div>
+      <span class="qr-cap">Scan / take a flyer</span>
+    </div>
+    <div class="foot-contact">
+      <strong>ELIXIR-UK RDM Club</strong>
+      rdm-coordination@elixiruknode.org<br>
+      elixiruknode.org/project/fair-in-action-bridge
+      <br><img class="foot-brand" src="assets/img/logos/biofair-logo.svg" alt="BioFAIR">
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
