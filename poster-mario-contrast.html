@@ -36,14 +36,14 @@
   .powerups{padding:13mm 40mm 2mm;text-align:center;}
   .pu-eyebrow{font-family:var(--px);font-size:15pt;letter-spacing:1.5pt;color:var(--amber);margin:0 0 11mm;line-height:1.6;}
   .pu-eyebrow span{color:var(--muted);}
-  .pu-row{display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:10mm 18mm;max-width:740mm;margin:0 auto;}
-  .pu{display:flex;flex-direction:column;align-items:center;gap:5mm;width:auto;}
+  .pu-row{display:grid;grid-template-columns:repeat(4,1fr);justify-items:center;align-items:start;gap:11mm 8mm;max-width:760mm;margin:0 auto;}
+  .pu{display:flex;flex-direction:column;align-items:center;gap:5mm;width:100%;}
   .pu-block{width:30mm;height:30mm;background:#f5a623;
     box-shadow:inset 0 0 0 3mm #7a4408, inset 0 7mm 0 3mm #ffce7a;
     display:flex;align-items:center;justify-content:center;
     font-family:var(--px);font-size:20pt;color:#fff;}
   .pu-block--more{background:#10243f;box-shadow:inset 0 0 0 3mm #355b86;color:#9fb9d4;}
-  .pu-name{font-family:var(--display);font-weight:800;font-size:30pt;color:var(--head);line-height:1.1;white-space:nowrap;}
+  .pu-name{font-family:var(--display);font-weight:800;font-size:30pt;color:var(--head);line-height:1.1;text-align:center;}
   .pu-foot{font-family:var(--display);font-weight:500;font-size:30pt;color:var(--body);margin:12mm auto 0;max-width:720mm;line-height:1.3;}
   .pu-foot strong{color:var(--amber-l);font-weight:800;}
 
@@ -97,6 +97,7 @@
       <div class="pu"><div class="pu-block">?</div><span class="pu-name">WorkflowHub</span></div>
       <div class="pu"><div class="pu-block">?</div><span class="pu-name">Galaxy</span></div>
       <div class="pu"><div class="pu-block">?</div><span class="pu-name">TeSS</span></div>
+      <div class="pu"><div class="pu-block">?</div><span class="pu-name">NIH FAIRification Framework</span></div>
       <div class="pu"><div class="pu-block pu-block--more">+</div><span class="pu-name">…and more</span></div>
     </div>
     <p class="pu-foot">Just a highlight – there's much more brilliant guidance from the wider FAIR community. But guidance alone doesn't reach the bench. <strong>The bridge puts it in researchers' hands.</strong></p>
@@ -105,7 +106,7 @@
   <div class="hero">
     <!-- ===================== 8-BIT LEVEL: BEFORE / AFTER ===================== -->
     <svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" role="img"
-         aria-label="A split 8-bit game level. Left, WITHOUT THE BRIDGE: a player falls into a pit with lost data and laptops, REUSED 0. Right, WITH THE BRIDGE: an RDM professional carries data across a bridge of FAIR power-up blocks to a goal flag reading FAIR where a researcher cheers, REUSED 275.">
+         aria-label="A split 8-bit game level. Left, WITHOUT THE BRIDGE: a player falls into a pit with lost data and laptops, REUSED 0. Right, WITH THE BRIDGE: an RDM professional carries data across a bridge of FAIR power-up blocks to a goal flag reading FAIR where a researcher cheers; everything reused (REUSED shown as a tick).">
       <defs>
         <g id="q">
           <rect x="0" y="0" width="54" height="54" fill="#7a4408"/>
@@ -138,21 +139,25 @@
           <rect x="-18" y="-12" width="14" height="3"  fill="#39627a"/>
           <rect x="-28" y="12"  width="56" height="7"  fill="#4a5663"/>
         </g>
-        <!-- abstract, genderless pictogram figure; colour set per-use via currentColor -->
-        <g id="fig">
-          <rect x="5" y="0"  width="6"  height="5" fill="currentColor"/>
-          <rect x="3" y="6"  width="10" height="3" fill="currentColor"/>
-          <rect x="3" y="9"  width="10" height="9" fill="currentColor"/>
-          <rect x="4" y="18" width="8"  height="4" fill="currentColor"/>
+        <g id="hero">
+          <rect x="3" y="0" width="10" height="2" fill="#6b4a2c"/><rect x="2" y="2" width="12" height="2" fill="#6b4a2c"/>
+          <rect x="4" y="4" width="8" height="4" fill="#f0c39a"/>
+          <rect x="6" y="5" width="1" height="2" fill="#20140c"/><rect x="9" y="5" width="1" height="2" fill="#20140c"/>
+          <rect x="3" y="9" width="10" height="7" fill="#eef2f6"/>
+          <rect x="7" y="9" width="1" height="7" fill="#c3d0db"/>
+          <rect x="7" y="11" width="1" height="1" fill="#9fb0bd"/><rect x="7" y="13" width="1" height="1" fill="#9fb0bd"/>
+          <rect x="1" y="5" width="2" height="5" fill="#eef2f6"/><rect x="13" y="5" width="2" height="5" fill="#eef2f6"/>
+          <rect x="1" y="4" width="2" height="1" fill="#f0c39a"/><rect x="13" y="4" width="2" height="1" fill="#f0c39a"/>
+          <rect x="4" y="16" width="3" height="5" fill="#34506b"/><rect x="9" y="16" width="3" height="5" fill="#34506b"/>
+          <rect x="3" y="21" width="4" height="1" fill="#161616"/><rect x="9" y="21" width="4" height="1" fill="#161616"/>
         </g>
-        <!-- same figure, arms raised (cheering) -->
-        <g id="figCheer">
-          <rect x="5" y="0"  width="6"  height="5" fill="currentColor"/>
-          <rect x="3" y="6"  width="10" height="3" fill="currentColor"/>
-          <rect x="3" y="9"  width="10" height="9" fill="currentColor"/>
-          <rect x="4" y="18" width="8"  height="4" fill="currentColor"/>
-          <rect x="0"  y="3" width="2" height="6" fill="currentColor"/>
-          <rect x="14" y="3" width="2" height="6" fill="currentColor"/>
+        <g id="benef">
+          <rect x="4" y="2" width="8" height="4" fill="#f0c39a"/>
+          <rect x="6" y="3" width="1" height="1" fill="#20140c"/><rect x="9" y="3" width="1" height="1" fill="#20140c"/>
+          <rect x="4" y="7" width="8" height="7" fill="#3fae6a"/>
+          <rect x="1" y="2" width="2" height="6" fill="#3fae6a"/><rect x="1" y="1" width="2" height="2" fill="#f0c39a"/>
+          <rect x="13" y="2" width="2" height="6" fill="#3fae6a"/><rect x="13" y="1" width="2" height="2" fill="#f0c39a"/>
+          <rect x="5" y="14" width="2" height="6" fill="#2b3a48"/><rect x="9" y="14" width="2" height="6" fill="#2b3a48"/>
         </g>
       </defs>
 
@@ -163,7 +168,8 @@
       <!-- mini HUDs -->
       <g font-family="'Press Start 2P',monospace" font-size="18">
         <text x="40"  y="92" fill="#fff">REUSED</text><text x="196" y="92" fill="#ff5a4a">0</text>
-        <text x="504" y="92" fill="#fff">REUSED</text><text x="664" y="92" fill="#4aa83f">275</text>
+        <text x="504" y="92" fill="#fff">REUSED</text>
+        <g fill="#4aa83f"><rect x="655" y="83" width="7" height="7"/><rect x="661" y="88" width="7" height="7"/><rect x="668" y="80" width="7" height="7"/><rect x="675" y="72" width="7" height="7"/><rect x="682" y="64" width="7" height="7"/></g>
       </g>
 
       <!-- divider -->
@@ -177,7 +183,7 @@
       <rect x="170" y="470" width="150" height="250" fill="#040a14"/>
       <use href="#qg" x="176" y="450"/><use href="#qg" x="230" y="450"/><use href="#qg" x="284" y="450"/>
       <text x="240" y="430" text-anchor="middle" font-family="'Press Start 2P',monospace" font-size="11" fill="#ff8a7a">POWER-UPS WASTED</text>
-      <g transform="translate(214,520) rotate(18) scale(2.6)"><use href="#fig" style="color:#8fb2c9"/></g>
+      <g transform="translate(214,520) rotate(18) scale(2.6)"><use href="#hero"/></g>
       <use href="#floppy" transform="translate(206,624) scale(1.2)"/>
       <use href="#floppy" transform="translate(258,664) scale(1.2)"/>
       <use href="#laptop" transform="translate(232,702)"/>
@@ -201,9 +207,9 @@
         <rect x="852" y="262" width="74" height="46" fill="none" stroke="#16401c" stroke-width="3"/>
         <text x="889" y="293" text-anchor="middle" font-family="'Press Start 2P',monospace" font-size="18" fill="#fff">FAIR</text>
       </g>
-      <use href="#figCheer" style="color:#5cc1e8" transform="translate(842,422) scale(2.2)"/>
+      <use href="#benef" transform="translate(842,422) scale(2.2)"/>
       <text x="858" y="414" text-anchor="middle" font-family="'Press Start 2P',monospace" font-size="10" fill="#9fdcb0">RESEARCHER</text>
-      <use href="#fig" style="color:#e3ebf2" transform="translate(690,408) scale(2.8)"/>
+      <use href="#hero" transform="translate(690,408) scale(2.8)"/>
       <use href="#floppy" transform="translate(744,422) scale(1.2)"/>
       <text x="710" y="388" text-anchor="middle" font-family="'Press Start 2P',monospace" font-size="10" fill="#ffd089">RDM PRO</text>
       </g>
