@@ -8,30 +8,31 @@
 @page { size: A0 portrait; margin: 0; }
 
 :root {
-  /* ---- Deep-navy theme ---- */
-  --navy:        #023452;   /* legacy deep navy — band / panel fills */
-  --navy-deep:   #001624;   /* darkest (footer) */
-  --navy-50:     rgba(255,255,255,.10);  /* faint chip fill */
-  --navy-100:    rgba(255,255,255,.24);  /* faint dashed rule */
-  --orange:      #ff8c38;   /* warm accent, brightened for dark bg */
-  --orange-soft: rgba(255,140,56,.18);   /* soft accent fill */
-  --teal:        #5cc1e8;   /* secondary accent, brightened for dark bg */
-  --green:       #4cc266;
+  /* ---- White theme (ELIXIR / BioFAIR brand on white) ---- */
+  --navy:        #023452;   /* brand deep navy – headings, text & accent bands */
+  --navy-deep:   #001624;   /* darkest (footer band) */
+  --navy-50:     rgba(2,52,82,.07);   /* faint chip fill on white */
+  --navy-100:    rgba(2,52,82,.22);   /* faint dashed rule on white */
+  --orange:      #ef7a1f;   /* warm accent on white */
+  --orange-soft: rgba(239,122,31,.14);   /* soft accent fill */
+  --teal:        #1f93c4;   /* secondary accent on white */
+  --green:       #3aa657;
 
-  --head:        #ffffff;   /* headings */
-  --ink:         #d7e7f2;   /* body text (light) */
-  --muted:       #8fb2c9;   /* muted light */
-  --line:        rgba(255,255,255,.16); /* hairline on dark */
-  --line-soft:   rgba(255,255,255,.10);
-  --bg:          #02263c;   /* poster base — a touch darker than #023452 */
-  --bg-alt:      #022f49;
-  --bg-band:     #022d46;   /* lifted band (problem section) */
-  --surface:     #063b58;   /* cards / panels */
-  --surface-2:   #0b4a6b;   /* raised panel / pills */
+  --head:        #ffffff;   /* text on dark bands / footer */
+  --ink:         #20415a;   /* body text on white */
+  --muted:       #5f7d90;   /* muted on white */
+  --line:        rgba(2,52,82,.16);  /* hairline on white */
+  --line-soft:   rgba(2,52,82,.08);
+  --bg:          #ffffff;   /* poster base */
+  --bg-alt:      #f3f7fa;
+  --bg-band:     #eef3f7;   /* lifted band (problem section) */
+  --surface:     #ffffff;   /* cards / panels */
+  --surface-2:   #0b4a6b;   /* raised dark pill (used on dark bands) */
 
-  --font-display: "Work Sans", "Lato", system-ui, sans-serif;
+  /* All non-gaming type is Lato (Lato has weights 100/300/400/700/900). */
+  --font-display: "Lato", system-ui, sans-serif;
   --font-body:    "Lato", system-ui, sans-serif;
-  --font-serif:   "Source Serif 4", Georgia, serif;
+  --font-serif:   "Lato", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -107,6 +108,38 @@ html, body {
   margin: 0 0 12mm;
   max-width: 420mm;
 }
+.hdr-wip {
+  display: inline-block;
+  background: var(--navy-50);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 24pt;
+  padding: 1mm 4mm;
+  border-radius: 1.5mm;
+}
+
+/* RDM Club panel: fills the header's right column (replaces the old resource grid) */
+.hdr-club {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5mm;
+  background: #fff;
+  border: 0.6mm solid var(--navy);
+  border-left: 5mm solid var(--orange);
+  border-radius: 3mm;
+  padding: 16mm 14mm;
+  box-shadow: 0 1.2mm 3mm rgba(2,52,82,.07);
+}
+.hdr-club .hdr-stats {
+  grid-template-columns: 1fr;
+  gap: 6mm;
+  margin-top: 5mm;
+  padding-top: 7mm;
+  border-top: 0.4mm solid var(--line);
+}
+.hdr-club .stat-lbl { max-width: none; }
 
 /* Club anchor: names the home of these stats / this work */
 .hdr-anchor {
@@ -819,6 +852,41 @@ html, body {
   border-radius: 999px;
 }
 
+/* Call for resources banner */
+.involve-cta {
+  margin-top: 4mm;
+  padding: 8mm 11mm;
+  background: var(--navy);
+  color: #fff;
+  border-left: 4mm solid var(--orange);
+  border-radius: 3mm;
+  display: flex;
+  flex-direction: column;
+  gap: 3mm;
+  align-items: flex-start;
+}
+.ic-tag {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18pt;
+  letter-spacing: 2pt;
+  color: var(--orange);
+}
+.ic-p {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 25pt;
+  line-height: 1.3;
+  margin: 0;
+}
+.ic-p strong { font-weight: 800; }
+.ic-mail {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 23pt;
+  color: #fff;
+}
+
 /* ============== FOOTER ============== */
 .ftr {
   background: var(--navy-deep);
@@ -848,10 +916,6 @@ html, body {
   letter-spacing: 3pt;
   color: var(--orange);
   text-transform: uppercase;
-  margin-bottom: 3mm;
-}
-.ftr-title--sub {
-  margin-top: 6mm;
 }
 
 .ftr-email {
@@ -1003,67 +1067,8 @@ html, body {
 }
 
 /* ============================================================
-   DARK NAVY THEME — overrides
-   Flips the former white surfaces + navy-on-white text for a
-   deep-navy background poster. Type is bumped a little and the
-   body copy trimmed (in poster.html) to keep the A0 sheet filled.
+   Body-copy sizing – bumped to keep the dense A0 sheet filled.
    ============================================================ */
-
-/* Headings & emphasised text that were navy-on-white → light */
-.eyebrow,
-.hdr-title,
-.hdr-anchor-name,
-.stat-num,
-.resources-h,
-.rtile-name,
-.sec-h,
-.claim-q,
-.bridge-mid-strap,
-.bridge-mid-strap strong,
-.bbar-tag,
-.pbook-h,
-.pbook-desc strong,
-.step-h,
-.step-p strong,
-.way-h,
-.way-p strong,
-.claim-a strong,
-.open-line strong,
-.contrast-item--no .ci-h {
-  color: var(--head);
-}
-
-/* Cards / panels that were white → deep-navy surfaces */
-.hdr-anchor,
-.rtile,
-.bridge-diag,
-.bbar,
-.pbook,
-.step {
-  background: var(--surface);
-  border-color: var(--line);
-}
-.pbook        { border-color: var(--line); box-shadow: 0 1.2mm 4mm rgba(0,0,0,.30); }
-.step         { box-shadow: 0 1mm 4mm rgba(0,0,0,.32); }
-.rtile        { box-shadow: 0 0.6mm 2mm rgba(0,0,0,.25); }
-.bbar         { box-shadow: 0 0.6mm 2mm rgba(0,0,0,.25); }
-
-.contrast-item--no {
-  background: var(--surface);
-  border: 0.4mm solid var(--line);
-}
-.contrast-item--yes {
-  background: var(--surface-2);
-  border: 0.4mm solid var(--orange);
-}
-
-/* Small accents on dark */
-.bridge-mid-tag { background: var(--surface-2); }
-.wd             { background: var(--surface-2); color: var(--head); }
-.step-dates li  { background: var(--orange-soft); color: var(--orange); }
-.wtag           { background: var(--navy-50); color: var(--head); }
-
-/* ---- Bigger body copy (the dense text) ---- */
 .hdr-anchor-sub { font-size: 21pt; }
 .claim-a        { font-size: 29pt; }
 .bridge-end-sub { font-size: 21pt; }

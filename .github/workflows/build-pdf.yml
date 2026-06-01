@@ -61,5 +61,5 @@ jobs:
             echo "No PDF changes to commit."
             exit 0
           fi
-          git commit -m "Build poster PDF v${VERSION} [skip ci]"
+          git commit -m "Build poster PDFs v${VERSION} (detailed + game) [skip ci]"
           git push

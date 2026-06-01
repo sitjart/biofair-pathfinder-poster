@@ -2,11 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>BioFAIR Pathfinder — The FAIR-in-action Bridge poster</title>
-  <meta http-equiv="refresh" content="0; url=poster.html">
-  <link rel="canonical" href="poster.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The FAIR-in-action Bridge – choose a poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#023452; --orange:#ef7a1f; --ink:#20415a; --muted:#5f7d90;
+      --line:rgba(2,52,82,.14); --bg:#eef3f7;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);color:var(--ink);
+      font-family:"Lato",system-ui,sans-serif;line-height:1.5;
+      min-height:100vh;display:flex;flex-direction:column;align-items:center;
+      padding:6vh 24px 8vh;}
+    .eyebrow{font-weight:900;letter-spacing:3px;text-transform:uppercase;
+      font-size:14px;color:var(--orange);margin:0 0 10px;}
+    h1{font-weight:900;font-size:clamp(34px,6vw,64px);line-height:1.02;
+      letter-spacing:-1.5px;color:var(--navy);margin:0 0 12px;text-align:center;}
+    h1 .o{color:var(--orange);}
+    .sub{max-width:680px;text-align:center;font-size:clamp(16px,2.4vw,21px);
+      color:var(--ink);margin:0 0 44px;}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:28px;width:100%;max-width:920px;}
+    .card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+      border-top:6px solid var(--orange);border-radius:12px;overflow:hidden;
+      text-decoration:none;color:inherit;
+      box-shadow:0 2px 10px rgba(2,52,82,.06);transition:transform .15s ease,box-shadow .15s ease;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(2,52,82,.16);}
+    .card--game{border-top-color:var(--navy);}
+    .thumb{aspect-ratio:841/1189;background:#dde7ef;display:flex;align-items:center;
+      justify-content:center;border-bottom:1px solid var(--line);overflow:hidden;}
+    .thumb svg{width:62%;height:auto;}
+    .card-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1;}
+    .tag{font-weight:900;letter-spacing:2px;text-transform:uppercase;font-size:12px;color:var(--orange);}
+    .card--game .tag{color:var(--navy);}
+    .card h2{font-weight:900;font-size:26px;line-height:1.1;color:var(--navy);margin:2px 0 0;}
+    .card p{margin:0;font-size:16px;color:var(--ink);}
+    .open{margin-top:auto;padding-top:12px;font-weight:900;color:var(--orange);font-size:15px;
+      display:inline-flex;align-items:center;gap:7px;}
+    .card--game .open{color:var(--navy);}
+    .foot{margin-top:48px;text-align:center;color:var(--muted);font-size:13px;line-height:1.6;}
+    .foot a{color:var(--navy);}
+  </style>
 </head>
 <body>
-  <p>Loading poster… <a href="poster.html">click here</a> if it doesn't redirect.</p>
+  <p class="eyebrow">BioFAIR Pathfinder · 2026–27</p>
+  <h1>The <span class="o">FAIR</span>-in-action Bridge</h1>
+  <p class="sub">Two poster designs for the same story. Pick one to view full-screen (each prints at true A0 portrait).</p>
+
+  <div class="cards">
+    <a class="card" href="poster.html">
+      <div class="thumb">
+        <!-- detailed / white poster glyph -->
+        <svg viewBox="0 0 120 170" role="img" aria-label="Detailed poster preview">
+          <rect x="2" y="2" width="116" height="166" rx="5" fill="#fff" stroke="#cdd9e2"/>
+          <rect x="12" y="12" width="64" height="9" rx="2" fill="#023452"/>
+          <rect x="12" y="25" width="44" height="5" rx="2" fill="#ef7a1f"/>
+          <rect x="12" y="40" width="96" height="22" rx="3" fill="#eef3f7" stroke="#cdd9e2"/>
+          <rect x="12" y="68" width="45" height="32" rx="3" fill="#fff" stroke="#cdd9e2"/>
+          <rect x="63" y="68" width="45" height="32" rx="3" fill="#fff" stroke="#cdd9e2"/>
+          <rect x="12" y="106" width="96" height="26" rx="3" fill="#023452"/>
+          <rect x="12" y="138" width="28" height="22" rx="3" fill="#eef3f7" stroke="#cdd9e2"/>
+          <rect x="44" y="138" width="28" height="22" rx="3" fill="#eef3f7" stroke="#cdd9e2"/>
+          <rect x="76" y="138" width="32" height="22" rx="3" fill="#001624"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="tag">Detailed · white</span>
+        <h2>The full-detail poster</h2>
+        <p>Everything in one sheet – the missing middle layer, both playbooks, the co-create → roll out → refine flow, and how to get involved. The safe, information-rich choice.</p>
+        <span class="open">View poster →</span>
+      </div>
+    </a>
+
+    <a class="card card--game" href="poster-mario-contrast.html">
+      <div class="thumb">
+        <!-- 8-bit / game poster glyph -->
+        <svg viewBox="0 0 120 170" role="img" aria-label="Game poster preview">
+          <rect x="2" y="2" width="116" height="166" rx="5" fill="#0a1830" stroke="#1d3354"/>
+          <rect x="20" y="12" width="52" height="9" rx="1" fill="#fff"/>
+          <rect x="34" y="12" width="20" height="9" rx="1" fill="#ffb02e"/>
+          <g fill="#f5a623">
+            <rect x="14" y="34" width="10" height="10"/><rect x="30" y="34" width="10" height="10"/>
+            <rect x="46" y="34" width="10" height="10"/><rect x="62" y="34" width="10" height="10"/>
+            <rect x="78" y="34" width="10" height="10"/><rect x="94" y="34" width="10" height="10"/>
+          </g>
+          <rect x="10" y="92" width="40" height="40" fill="#7a4a24"/>
+          <rect x="10" y="92" width="40" height="6" fill="#4aa83f"/>
+          <rect x="70" y="92" width="40" height="40" fill="#7a4a24"/>
+          <rect x="70" y="92" width="40" height="6" fill="#4aa83f"/>
+          <g fill="#f5a623"><rect x="50" y="90" width="9" height="9"/><rect x="60" y="90" width="9" height="9"/></g>
+          <rect x="98" y="74" width="3" height="20" fill="#cdd9e2"/>
+          <rect x="86" y="74" width="13" height="9" fill="#2f9a3a"/>
+          <rect x="44" y="80" width="8" height="11" fill="#eef2f6"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="tag">8-bit · bold</span>
+        <h2>The arcade poster</h2>
+        <p>A pixel-platformer metaphor: without the bridge the data drops in the pit; with it, RDM pros carry the FAIR power-ups across to researchers. Eye-catching for an all-hands.</p>
+        <span class="open">View poster →</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="foot">
+    ELIXIR-UK RDM Club · <a href="https://elixiruknode.org/project/fair-in-action-bridge/">elixiruknode.org/project/fair-in-action-bridge</a><br>
+    To print: open a poster, then ⌘P / Ctrl-P → paper size A0 portrait, margins none, background graphics on.
+  </p>
 </body>
 </html>
